@@ -25,15 +25,18 @@ const PersonDetail = () => {
                     <h1>Person Details</h1>
 
                     <h2>Name : {person.firstName} {person.lastName}</h2>
+
+                    <h3>Cars Owned:</h3>
                     <div className="cars_section">
                         {
                             car.map((item) => (
                                 <div className="carContainer" key={item.id}>
                                     <div className="display">
-                                        <p>Make:    {item.make} </p>
-                                        <p>Model:   {item.model}</p>
-                                        <p>Year:    {item.year}</p>
-                                        <p>Price:   {item.price} </p>
+                                        
+                                        <div><b>Make: </b>   {item.make} </div>
+                                        <div><b>Model:</b>   {item.model}</div>
+                                        <div><b>Year: </b>   {item.year}</div>
+                                        <div><b>Price:</b>   {item.price} </div>
                                     </div>
                                 </div>
                             ))

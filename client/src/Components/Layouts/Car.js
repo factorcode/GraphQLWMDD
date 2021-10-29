@@ -51,19 +51,19 @@ const Car = (props) => {
     }
 
     return (
-        <div className="">
+        <div className="my_cars">
             {
                 editMode ?
                     <UpdateCar
                         handleEditMode={handleEditMode}
                         data={props} />
                     :
-                    <div>
+                    <div className="card_item">
                         <p>Make     - {props.make}</p>
                         <p>Model    - {props.model}</p>
                         <p>Year     - {props.year}</p>
                         <p>Price    - {props.price}</p>
-                        <div>
+                        <div className="card_controls">
                             <button onClick={handleEditMode}>Edit</button>
                             <button onClick={RemoveCar}>Remove</button>
                         </div>

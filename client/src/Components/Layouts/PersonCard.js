@@ -94,7 +94,7 @@ const PersonCard = ({ id, firstName, lastName }) => {
                     />
                 )
                     : (
-                        <Card
+                        <Card 
                             actions={[
                                 <button onClick={handleEditMode}>Edit</button>,
                                 <button onClick={RemovePerson}>Remove</button>
@@ -104,7 +104,7 @@ const PersonCard = ({ id, firstName, lastName }) => {
                     )
             }
             <CarsList key={id} personId={id}/>
-            <div className="footer">
+            <div className="card_footer">
                 <Link to={`/people/${id}`}> Learn more</Link>
             </div>
         </div>

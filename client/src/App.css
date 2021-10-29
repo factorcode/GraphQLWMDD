@@ -28,17 +28,80 @@
   color: #61dafb;
 }
 .input-form{
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
-}
-
-.person-form, .cars-form{
-  padding: 8px;
   border: 1px solid indigo;
 }
 
-.cars-form form{
+.person-form, .cars-form{
+  padding: 16px;
+  
+}
 
+.cars-form{
+  display: flex;
+  
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;align-items: center;
+  max-width: 80%;
+  margin: auto;
+}
+
+#add-person{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr;
+  grid-gap: 5px;
+}
+
+.Details{
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.Details h3{
+  margin-top: 2rem;
+}
+
+.cars_section{
+  display: flex;
+  gap: 1rem;
+
+  margin: 1rem 0;
+}
+
+.carContainer, .cardLayout, .card_item{
+  border: 1px solid black;
+  padding: 8px;
+  
+}
+
+.card_item{
+  
+}
+.card_controls{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.my_cars{
+  margin-top: 1rem;
+  max-width: fit-content;
+}
+
+.cars_list{
+  display: flex;
+  gap: 1rem;
+}
+.card_footer{
+  text-align: right;
 }
 
 @keyframes App-logo-spin {

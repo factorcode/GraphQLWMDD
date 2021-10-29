@@ -55,25 +55,24 @@ const UpdateCar = (props) => {
     return (
         <Form
             form={form}
-            name='add-car'
+            name='update-car'
             size='large'
             onFinish={onFinish}
             initialValues={{
                 Year:props.data.year,
                 make:props.data.make,
                 model:props.data.model,
-                Price:props.data.price
+                Price:props.data.price, 
+                personId: props.data.personId
             }}
         >
             <Form.Item
                 name='PersonId'
-                rules={[{ required: true, message: 'Please select the person from list!' }]} >
+                >
                 <Select
                     style={{ width: 200 }}
                     onChange={handleSelectChange}
                     placeholder="Select Name"
-                    disabled="true"
-                    hidden="true"
                 >
                     {
                         data.people.map(({ id, firstName, lastName }) => (
@@ -112,7 +111,7 @@ const UpdateCar = (props) => {
                             !form.isFieldsTouched(true) ||
                             form.getFieldsError().filter(({ errors }) => errors.length).length
                         }
-                    > Add Car</Button>
+                    > Update Car</Button>
                 )}
             </Form.Item>
             <Button onClick={props.handleEditMode}> Cancel </Button>

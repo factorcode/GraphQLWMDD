@@ -132,12 +132,12 @@ const InputForms = () => {
                     <Form.Item
                         name='firstName'
                         rules={[{ required: true, message: 'First name is a required field! ' }]} >
-                        <Input placeholder='i.e. John' />
+                        <Input placeholder='First Name' />
                     </Form.Item>
                     <Form.Item
                         name='lastName'
                         rules={[{ required: true, message: 'Last name is a required field! ' }]} >
-                        <Input placeholder='i.e. Doe' />
+                        <Input placeholder='Last Name' />
                     </Form.Item>
                     <Form.Item shouldUpdate={true}>
                         {() => (

@@ -10,7 +10,7 @@ const CarsList = (props) => {
     if (error) return `Error! ${error.message}`
 
     return (
-        <div>
+        <div className="cars_list">
             {
                 data.cars.filter(({ personId }) => personId === props.personId)
                     .map(({ id, year, make, model, price, personId }) => (
